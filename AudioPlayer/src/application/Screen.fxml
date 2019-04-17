@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8"
+            fx:controller="application.ScreenController">
+    <center>
+        <Pane prefHeight="200.0" prefWidth="300.0" BorderPane.alignment="CENTER">
+            <children>
+                <TextField fx:id="txtSource" layoutX="65.0" layoutY="28.0" prefHeight="22.0" prefWidth="160.0" />
+                <Label layoutX="14.0" layoutY="32.0" text="Source" />
+                <Button fx:id="btnChange" layoutX="228.0" layoutY="28.0" mnemonicParsing="false"
+                        onAction="#btnChangeHandler" text="CHANGE" />
+                <Label layoutX="14.0" layoutY="57.0" text="Arquive" />
+                <TextField fx:id="txtArquive" layoutX="65.0" layoutY="53.0" prefHeight="22.0" prefWidth="220.0" />
+                <Button fx:id="btnStop" layoutX="236.0" layoutY="168.0" mnemonicParsing="false"
+                        onAction="#btnStopHandler" prefWidth="50.0" style="-fx-background-color: #ffb3b3;" text="STOP">
+                    <font>
+                        <Font name="System Bold" size="11.0" />
+                    </font>
+                </Button>
+                <Button fx:id="btnPlay" layoutX="236.0" layoutY="142.0" mnemonicParsing="false"
+                        onAction="#btnPlayHandler" prefWidth="50.0" style="-fx-background-color: #b3ffcc;" text="PLAY">
+                    <font>
+                        <Font name="System Bold" size="11.0" />
+                    </font>
+                </Button>
+                <Button fx:id="btnVolMinus" layoutX="14.0" layoutY="166.0" mnemonicParsing="false"
+                        onAction="#btnVolMinusHandler" prefWidth="50.0" text="vol -" />
+                <Button fx:id="btnVolPlus" layoutX="14.0" layoutY="140.0" mnemonicParsing="false"
+                        onAction="#btnVolPlusHandler" prefWidth="50.0" text="vol +" />
+                <Button fx:id="btnBackward" layoutX="90.0" layoutY="142.0" mnemonicParsing="false"
+                        onAction="#btnBackwardHandler" prefWidth="60.0" text="&lt;&lt; BW" />
+                <Button fx:id="btnForward" layoutX="150.0" layoutY="142.0" mnemonicParsing="false"
+                        onAction="#btnForwardHandler" prefWidth="60.0" text="FF &gt;&gt;" />
+            </children>
+        </Pane>
+    </center>
+    <top>
+        <Label contentDisplay="CENTER" prefHeight="15.0" text="S i m p l e A u d i o P l a y e r" textAlignment="CENTER"
+               BorderPane.alignment="CENTER">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+        </Label>
+    </top>
+    <bottom>
+        <Label fx:id="lblStatus" text="&lt;Status&gt;" BorderPane.alignment="CENTER" />
+    </bottom>
+</BorderPane>
